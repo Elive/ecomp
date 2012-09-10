@@ -277,8 +277,11 @@ movePaintWindow(CompWindow *w, const WindowPaintAttrib *attrib,
           {
              sAttrib = *attrib;
              attrib = &sAttrib;
-             sAttrib.opacity = (sAttrib.opacity + ((int)(sAttrib.opacity *
-                                                         md->moveOpacity * ms->progress))) >> 16;
+             float opacity_percent, one_percent;
+
+             one_percent = (float)1 / (float)100 * sAttrib.opacity;
+             opacity_percent = 100 - (((float)md->moveOpacity) / ((float)sAttrib.opacity) * 100);
+             sAttrib.opacity -= (sAttrib.opacity + (opacity_percent * one_percent * ms->progress - sAttrib.opacity));
           }
         if (ms->progress == 0.0)
           {
