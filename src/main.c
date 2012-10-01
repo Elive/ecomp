@@ -432,6 +432,8 @@ main(int argc, char **argv)
    if (!addDisplay (displayName))
      return 1;
 
+   printf("ECOMORPH: Initialized Successfully\n");
+
    eventLoop ();
 
    xmlCleanupParser ();
