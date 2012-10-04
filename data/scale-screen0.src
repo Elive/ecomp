@@ -1,0 +1,75 @@
+group "group" struct {
+    group "options" hash {
+        key "overlay_icon";
+        group "option" struct {
+            value "type" int: 1;
+            value "int" int: 1;
+            value "double" double: 0.0000000000000000000000000;
+        }
+    }
+    group "options" hash {
+        key "darken_back";
+        group "option" struct {
+            value "type" int: 0;
+            value "int" int: 1;
+            value "double" double: 0.0000000000000000000000000;
+        }
+    }
+    group "options" hash {
+        key "window_match";
+        group "option" struct {
+            value "type" int: 5;
+            value "int" int: 0;
+            value "double" double: 0.0000000000000000000000000;
+            value "string" string: "Toolbar | Utility | Dialog | Normal | Unknown | Fullscreen";
+        }
+    }
+    group "options" hash {
+        key "spacing";
+        group "option" struct {
+            value "type" int: 1;
+            value "int" int: 14;
+            value "double" double: 0.0000000000000000000000000;
+        }
+    }
+    group "options" hash {
+        key "multioutput_mode";
+        group "option" struct {
+            value "type" int: 1;
+            value "int" int: 0;
+            value "double" double: 0.0000000000000000000000000;
+        }
+    }
+    group "options" hash {
+        key "timestep";
+        group "option" struct {
+            value "type" int: 2;
+            value "int" int: 0;
+            value "double" double: 0.1000000000000000055511151;
+        }
+    }
+    group "options" hash {
+        key "hover_time";
+        group "option" struct {
+            value "type" int: 1;
+            value "int" int: 750;
+            value "double" double: 0.0000000000000000000000000;
+        }
+    }
+    group "options" hash {
+        key "speed";
+        group "option" struct {
+            value "type" int: 2;
+            value "int" int: 0;
+            value "double" double: 1.5544999999999999928945726;
+        }
+    }
+    group "options" hash {
+        key "opacity";
+        group "option" struct {
+            value "type" int: 1;
+            value "int" int: 80;
+            value "double" double: 0.0000000000000000000000000;
+        }
+    }
+}

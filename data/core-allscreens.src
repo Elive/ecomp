@@ -1,0 +1,104 @@
+group "group" struct {
+    group "options" hash {
+        key "active_plugins";
+        group "option" struct {
+            group "list" list {
+                group "option" struct {
+                    value "type" int: 0;
+                    value "int" int: 0;
+                    value "double" double: 0.0000000000000000000000000;
+                    value "string" string: "ini";
+                }
+                group "option" struct {
+                    value "type" int: 0;
+                    value "int" int: 0;
+                    value "double" double: 0.0000000000000000000000000;
+                    value "string" string: "inotify";
+                }
+                group "option" struct {
+                    value "type" int: 0;
+                    value "int" int: 0;
+                    value "double" double: 0.0000000000000000000000000;
+                    value "string" string: "text";
+                }
+                group "option" struct {
+                    value "type" int: 0;
+                    value "int" int: 0;
+                    value "double" double: 0.0000000000000000000000000;
+                    value "string" string: "regex";
+                }
+                group "option" struct {
+                    value "type" int: 0;
+                    value "int" int: 0;
+                    value "double" double: 0.0000000000000000000000000;
+                    value "string" string: "png";
+                }
+                group "option" struct {
+                    value "type" int: 0;
+                    value "int" int: 0;
+                    value "double" double: 0.0000000000000000000000000;
+                    value "string" string: "decoration";
+                }
+                group "option" struct {
+                    value "type" int: 0;
+                    value "int" int: 0;
+                    value "double" double: 0.0000000000000000000000000;
+                    value "string" string: "move";
+                }
+                group "option" struct {
+                    value "type" int: 0;
+                    value "int" int: 0;
+                    value "double" double: 0.0000000000000000000000000;
+                    value "string" string: "wall";
+                }
+                group "option" struct {
+                    value "type" int: 0;
+                    value "int" int: 0;
+                    value "double" double: 0.0000000000000000000000000;
+                    value "string" string: "switcher";
+                }
+                group "option" struct {
+                    value "type" int: 0;
+                    value "int" int: 0;
+                    value "double" double: 0.0000000000000000000000000;
+                    value "string" string: "scale";
+                }
+                group "option" struct {
+                    value "type" int: 0;
+                    value "int" int: 0;
+                    value "double" double: 0.0000000000000000000000000;
+                    value "string" string: "expo";
+                }
+                group "option" struct {
+                    value "type" int: 0;
+                    value "int" int: 0;
+                    value "double" double: 0.0000000000000000000000000;
+                    value "string" string: "animation";
+                }
+                group "option" struct {
+                    value "type" int: 0;
+                    value "int" int: 0;
+                    value "double" double: 0.0000000000000000000000000;
+                    value "string" string: "scaleaddon";
+                }
+                group "option" struct {
+                    value "type" int: 0;
+                    value "int" int: 0;
+                    value "double" double: 0.0000000000000000000000000;
+                    value "string" string: "zoom";
+                }
+            }
+            value "type" int: 6;
+            value "int" int: 0;
+            value "double" double: 0.0000000000000000000000000;
+        }
+    }
+    group "options" hash {
+        key "texture_filter";
+        group "option" struct {
+            value "type" int: 1;
+            value "int" int: 1;
+            value "double" double: 0.0000000000000000000000000;
+        }
+    }
+}

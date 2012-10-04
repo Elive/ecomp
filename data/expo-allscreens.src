@@ -1,0 +1,156 @@
+group "group" struct {
+    group "options" hash {
+        key "hide_docks";
+        group "option" struct {
+            value "type" int: 0;
+            value "int" int: 1;
+            value "double" double: 0.0000000000000000000000000;
+        }
+    }
+    group "options" hash {
+        key "expo_animation";
+        group "option" struct {
+            value "type" int: 1;
+            value "int" int: 0;
+            value "double" double: 0.0000000000000000000000000;
+        }
+    }
+    group "options" hash {
+        key "expo";
+        group "option" struct {
+            value "type" int: 0;
+            value "int" int: 0;
+            value "double" double: 0.0000000000000000000000000;
+        }
+    }
+    group "options" hash {
+        key "aspect_ratio";
+        group "option" struct {
+            value "type" int: 2;
+            value "int" int: 0;
+            value "double" double: 1.0000000000000000000000000;
+        }
+    }
+    group "options" hash {
+        key "rotate";
+        group "option" struct {
+            value "type" int: 0;
+            value "int" int: 0;
+            value "double" double: 0.0000000000000000000000000;
+        }
+    }
+    group "options" hash {
+        key "scale_factor";
+        group "option" struct {
+            value "type" int: 2;
+            value "int" int: 0;
+            value "double" double: 0.7500000000000000000000000;
+        }
+    }
+    group "options" hash {
+        key "immediate_move";
+        group "option" struct {
+            value "type" int: 0;
+            value "int" int: 0;
+            value "double" double: 0.0000000000000000000000000;
+        }
+    }
+    group "options" hash {
+        key "ground_color2";
+        group "option" struct {
+            value "type" int: 4;
+            value "int" int: 0;
+            value "double" double: 0.0000000000000000000000000;
+            value "string" string: "#b3b3b300";
+        }
+    }
+    group "options" hash {
+        key "zoom_time";
+        group "option" struct {
+            value "type" int: 2;
+            value "int" int: 0;
+            value "double" double: 1.2263000000000001676880856;
+        }
+    }
+    group "options" hash {
+        key "reflection";
+        group "option" struct {
+            value "type" int: 0;
+            value "int" int: 0;
+            value "double" double: 0.0000000000000000000000000;
+        }
+    }
+    group "options" hash {
+        key "ground_size";
+        group "option" struct {
+            value "type" int: 2;
+            value "int" int: 0;
+            value "double" double: 0.5000000000000000000000000;
+        }
+    }
+    group "options" hash {
+        key "expo_immediate_move";
+        group "option" struct {
+            value "type" int: 0;
+            value "int" int: 0;
+            value "double" double: 0.0000000000000000000000000;
+        }
+    }
+    group "options" hash {
+        key "ground_color1";
+        group "option" struct {
+            value "type" int: 4;
+            value "int" int: 0;
+            value "double" double: 0.0000000000000000000000000;
+            value "string" string: "#b3b3b3cc";
+        }
+    }
+    group "options" hash {
+        key "multioutput_mode";
+        group "option" struct {
+            value "type" int: 1;
+            value "int" int: 0;
+            value "double" double: 0.0000000000000000000000000;
+        }
+    }
+    group "options" hash {
+        key "distance";
+        group "option" struct {
+            value "type" int: 2;
+            value "int" int: 0;
+            value "double" double: 0.0000000000000000000000000;
+        }
+    }
+    group "options" hash {
+        key "next";
+        group "option" struct {
+            value "type" int: 0;
+            value "int" int: 0;
+            value "double" double: 0.0000000000000000000000000;
+        }
+    }
+    group "options" hash {
+        key "mipmaps";
+        group "option" struct {
+            value "type" int: 0;
+            value "int" int: 1;
+            value "double" double: 0.0000000000000000000000000;
+        }
+    }
+    group "options" hash {
+        key "prev";
+        group "option" struct {
+            value "type" int: 0;
+            value "int" int: 0;
+            value "double" double: 0.0000000000000000000000000;
+        }
+    }
+    group "options" hash {
+        key "double_click_time";
+        group "option" struct {
+            value "type" int: 1;
+            value "int" int: 500;
+            value "double" double: 0.0000000000000000000000000;
+        }
+    }
+}

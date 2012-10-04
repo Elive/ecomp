@@ -1,0 +1,42 @@
+group "group" struct {
+    group "options" hash {
+        key "in";
+        group "option" struct {
+            value "type" int: 0;
+            value "int" int: 0;
+            value "double" double: 0.0000000000000000000000000;
+        }
+    }
+    group "options" hash {
+        key "active_opacity";
+        group "option" struct {
+            value "type" int: 0;
+            value "int" int: 0;
+            value "double" double: 100.0000000000000000000000000;
+        }
+    }
+    group "options" hash {
+        key "transparent_manual_only";
+        group "option" struct {
+            value "type" int: 0;
+            value "int" int: 0;
+            value "double" double: 0.0000000000000000000000000;
+        }
+    }
+    group "options" hash {
+        key "inactive_opacity";
+        group "option" struct {
+            value "type" int: 0;
+            value "int" int: 0;
+            value "double" double: 100.0000000000000000000000000;
+        }
+    }
+    group "options" hash {
+        key "fade_time";
+        group "option" struct {
+            value "type" int: 0;
+            value "int" int: 0;
+            value "double" double: 1.2113000000000000433431069;
+        }
+    }
+}

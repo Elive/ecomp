@@ -1,0 +1,140 @@
+group "group" struct {
+    group "options" hash {
+        key "background_gradient_base_color";
+        group "option" struct {
+            value "type" int: 4;
+            value "int" int: 0;
+            value "double" double: 0.0000000000000000000000000;
+            value "string" string: "#cccce6d9";
+        }
+    }
+    group "options" hash {
+        key "slide_duration";
+        group "option" struct {
+            value "type" int: 2;
+            value "int" int: 0;
+            value "double" double: 0.2885000000000000341948692;
+        }
+    }
+    group "options" hash {
+        key "arrow_shadow_color";
+        group "option" struct {
+            value "type" int: 4;
+            value "int" int: 0;
+            value "double" double: 0.0000000000000000000000000;
+            value "string" string: "#dcdcdcd9";
+        }
+    }
+    group "options" hash {
+        key "miniscreen";
+        group "option" struct {
+            value "type" int: 0;
+            value "int" int: 0;
+            value "double" double: 0.0000000000000000000000000;
+        }
+    }
+    group "options" hash {
+        key "thumb_gradient_highlight_color";
+        group "option" struct {
+            value "type" int: 4;
+            value "int" int: 0;
+            value "double" double: 0.0000000000000000000000000;
+            value "string" string: "#3f3f3f3f";
+        }
+    }
+    group "options" hash {
+        key "preview_timeout";
+        group "option" struct {
+            value "type" int: 2;
+            value "int" int: 0;
+            value "double" double: 0.2746999999999999997335465;
+        }
+    }
+    group "options" hash {
+        key "thumb_highlight_gradient_base_color";
+        group "option" struct {
+            value "type" int: 4;
+            value "int" int: 0;
+            value "double" double: 0.0000000000000000000000000;
+            value "string" string: "#fffffff3";
+        }
+    }
+    group "options" hash {
+        key "edge_radius";
+        group "option" struct {
+            value "type" int: 1;
+            value "int" int: 5;
+            value "double" double: 0.0000000000000000000000000;
+        }
+    }
+    group "options" hash {
+        key "background_gradient_highlight_color";
+        group "option" struct {
+            value "type" int: 4;
+            value "int" int: 0;
+            value "double" double: 0.0000000000000000000000000;
+            value "string" string: "#f3f3ffd9";
+        }
+    }
+    group "options" hash {
+        key "outline_color";
+        group "option" struct {
+            value "type" int: 4;
+            value "int" int: 0;
+            value "double" double: 0.0000000000000000000000000;
+            value "string" string: "#333333d9";
+        }
+    }
+    group "options" hash {
+        key "background_gradient_shadow_color";
+        group "option" struct {
+            value "type" int: 4;
+            value "int" int: 0;
+            value "double" double: 0.0000000000000000000000000;
+            value "string" string: "#f3f3ffd9";
+        }
+    }
+    group "options" hash {
+        key "move_background";
+        group "option" struct {
+            value "type" int: 0;
+            value "int" int: 0;
+            value "double" double: 0.0000000000000000000000000;
+        }
+    }
+    group "options" hash {
+        key "thumb_highlight_gradient_shadow_color";
+        group "option" struct {
+            value "type" int: 4;
+            value "int" int: 0;
+            value "double" double: 0.0000000000000000000000000;
+            value "string" string: "#dfdfdfa6";
+        }
+    }
+    group "options" hash {
+        key "show_switcher";
+        group "option" struct {
+            value "type" int: 0;
+            value "int" int: 0;
+            value "double" double: 0.0000000000000000000000000;
+        }
+    }
+    group "options" hash {
+        key "thumb_gradient_base_color";
+        group "option" struct {
+            value "type" int: 4;
+            value "int" int: 0;
+            value "double" double: 0.0000000000000000000000000;
+            value "string" string: "#33333359";
+        }
+    }
+    group "options" hash {
+        key "arrow_base_color";
+        group "option" struct {
+            value "type" int: 4;
+            value "int" int: 0;
+            value "double" double: 0.0000000000000000000000000;
+            value "string" string: "#e6e6e6d9";
+        }
+    }
+}

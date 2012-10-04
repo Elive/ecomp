@@ -1,0 +1,1161 @@
+group "group" struct {
+    group "options" hash {
+        key "vacuum_open_start_width";
+        group "option" struct {
+            value "type" int: 1;
+            value "int" int: 30;
+            value "double" double: 0.0000000000000000000000000;
+        }
+    }
+    group "options" hash {
+        key "explode_tessellation";
+        group "option" struct {
+            value "type" int: 1;
+            value "int" int: 0;
+            value "double" double: 0.0000000000000000000000000;
+        }
+    }
+    group "options" hash {
+        key "focus_options";
+        group "option" struct {
+            group "list" list {
+                group "option" struct {
+                    value "type" int: 3;
+                    value "int" int: 0;
+                    value "double" double: 0.0000000000000000000000000;
+                    value "string" string: "";
+                }
+            }
+            value "type" int: 6;
+            value "int" int: 0;
+            value "double" double: 0.0000000000000000000000000;
+        }
+    }
+    group "options" hash {
+        key "open_random_effects";
+        group "option" struct {
+            value "type" int: 6;
+            value "int" int: 0;
+            value "double" double: 0.0000000000000000000000000;
+        }
+    }
+    group "options" hash {
+        key "minimize_options";
+        group "option" struct {
+            value "type" int: 6;
+            value "int" int: 0;
+            value "double" double: 0.0000000000000000000000000;
+        }
+    }
+    group "options" hash {
+        key "minimize_durations";
+        group "option" struct {
+            group "list" list {
+                group "option" struct {
+                    value "type" int: 0;
+                    value "int" int: 418;
+                    value "double" double: 0.0000000000000000000000000;
+                }
+            }
+            value "type" int: 6;
+            value "int" int: 0;
+            value "double" double: 0.0000000000000000000000000;
+        }
+    }
+    group "options" hash {
+        key "vacuum_moving_end";
+        group "option" struct {
+            value "type" int: 0;
+            value "int" int: 1;
+            value "double" double: 0.0000000000000000000000000;
+        }
+    }
+    group "options" hash {
+        key "skewer_gridy";
+        group "option" struct {
+            value "type" int: 1;
+            value "int" int: 4;
+            value "double" double: 0.0000000000000000000000000;
+        }
+    }
+    group "options" hash {
+        key "fire_constant_speed";
+        group "option" struct {
+            value "type" int: 0;
+            value "int" int: 0;
+            value "double" double: 0.0000000000000000000000000;
+        }
+    }
+    group "options" hash {
+        key "airplane_path_length";
+        group "option" struct {
+            value "type" int: 2;
+            value "int" int: 0;
+            value "double" double: 1.0000000000000000000000000;
+        }
+    }
+    group "options" hash {
+        key "skewer_gridx";
+        group "option" struct {
+            value "type" int: 1;
+            value "int" int: 6;
+            value "double" double: 0.0000000000000000000000000;
+        }
+    }
+    group "options" hash {
+        key "fold_gridy";
+        group "option" struct {
+            value "type" int: 1;
+            value "int" int: 3;
+            value "double" double: 0.0000000000000000000000000;
+        }
+    }
+    group "options" hash {
+        key "skewer_direction";
+        group "option" struct {
+            value "type" int: 1;
+            value "int" int: 8;
+            value "double" double: 0.0000000000000000000000000;
+        }
+    }
+    group "options" hash {
+        key "domino_direction";
+        group "option" struct {
+            value "type" int: 1;
+            value "int" int: 5;
+            value "double" double: 0.0000000000000000000000000;
+        }
+    }
+    group "options" hash {
+        key "glide1_away_angle";
+        group "option" struct {
+            value "type" int: 2;
+            value "int" int: 0;
+            value "double" double: 0.0000000000000000000000000;
+        }
+    }
+    group "options" hash {
+        key "magic_lamp_max_waves";
+        group "option" struct {
+            value "type" int: 1;
+            value "int" int: 11;
+            value "double" double: 0.0000000000000000000000000;
+        }
+    }
+    group "options" hash {
+        key "skewer_tessellation";
+        group "option" struct {
+            value "type" int: 1;
+            value "int" int: 0;
+            value "double" double: 0.0000000000000000000000000;
+        }
+    }
+    group "options" hash {
+        key "magic_lamp_amp_max";
+        group "option" struct {
+            value "type" int: 2;
+            value "int" int: 0;
+            value "double" double: 300.0000000000000000000000000;
+        }
+    }
+    group "options" hash {
+        key "explode_gridy";
+        group "option" struct {
+            value "type" int: 1;
+            value "int" int: 10;
+            value "double" double: 0.0000000000000000000000000;
+        }
+    }
+    group "options" hash {
+        key "focus_random_effects";
+        group "option" struct {
+            value "type" int: 0;
+            value "int" int: 0;
+            value "double" double: 0.0000000000000000000000000;
+        }
+    }
+    group "options" hash {
+        key "skewer_thickness";
+        group "option" struct {
+            value "type" int: 2;
+            value "int" int: 0;
+            value "double" double: 1.0000000000000000000000000;
+        }
+    }
+    group "options" hash {
+        key "focus_effects";
+        group "option" struct {
+            group "list" list {
+                group "option" struct {
+                    value "type" int: 1;
+                    value "int" int: 2;
+                    value "double" double: 0.0000000000000000000000000;
+                }
+            }
+            value "type" int: 6;
+            value "int" int: 0;
+            value "double" double: 0.0000000000000000000000000;
+        }
+    }
+    group "options" hash {
+        key "open_matches";
+        group "option" struct {
+            group "list" list {
+                group "option" struct {
+                    value "type" int: 0;
+                    value "int" int: 0;
+                    value "double" double: 0.0000000000000000000000000;
+                    value "string" string: "(type=Utility)";
+                }
+                group "option" struct {
+                    value "type" int: 0;
+                    value "int" int: 0;
+                    value "double" double: 0.0000000000000000000000000;
+                    value "string" string: "(type=Normal | Dialog | ModalDialog)";
+                }
+                group "option" struct {
+                    value "type" int: 0;
+                    value "int" int: 0;
+                    value "double" double: 0.0000000000000000000000000;
+                    value "string" string: "(type=Menu)";
+                }
+                group "option" struct {
+                    value "type" int: 0;
+                    value "int" int: 0;
+                    value "double" double: 0.0000000000000000000000000;
+                    value "string" string: "(type=Unknown)";
+                }
+            }
+            value "type" int: 6;
+            value "int" int: 0;
+            value "double" double: 0.0000000000000000000000000;
+        }
+    }
+    group "options" hash {
+        key "beam_slowdown";
+        group "option" struct {
+            value "type" int: 2;
+            value "int" int: 0;
+            value "double" double: 1.0000000000000000000000000;
+        }
+    }
+    group "options" hash {
+        key "dodge_gap_ratio";
+        group "option" struct {
+            value "type" int: 2;
+            value "int" int: 0;
+            value "double" double: 0.6628000000000000557776048;
+        }
+    }
+    group "options" hash {
+        key "vacuum_grid_res";
+        group "option" struct {
+            value "type" int: 1;
+            value "int" int: 100;
+            value "double" double: 0.0000000000000000000000000;
+        }
+    }
+    group "options" hash {
+        key "zoom_from_center";
+        group "option" struct {
+            value "type" int: 1;
+            value "int" int: 0;
+            value "double" double: 0.0000000000000000000000000;
+        }
+    }
+    group "options" hash {
+        key "fire_direction";
+        group "option" struct {
+            value "type" int: 1;
+            value "int" int: 0;
+            value "double" double: 0.0000000000000000000000000;
+        }
+    }
+    group "options" hash {
+        key "close_matches";
+        group "option" struct {
+            group "list" list {
+                group "option" struct {
+                    value "type" int: 5;
+                    value "int" int: 0;
+                    value "double" double: 0.0000000000000000000000000;
+                    value "string" string: "(type=Normal | Dialog | ModalDialog)";
+                }
+                group "option" struct {
+                    value "type" int: 5;
+                    value "int" int: 0;
+                    value "double" double: 0.0000000000000000000000000;
+                    value "string" string: "(type=Menu | PopupMenu | DropdownMenu)";
+                }
+                group "option" struct {
+                    value "type" int: 5;
+                    value "int" int: 0;
+                    value "double" double: 0.0000000000000000000000000;
+                    value "string" string: "(type=Tooltip | Notification)";
+                }
+                group "option" struct {
+                    value "type" int: 5;
+                    value "int" int: 0;
+                    value "double" double: 0.0000000000000000000000000;
+                    value "string" string: "(type=Utility)";
+                }
+                group "option" struct {
+                    value "type" int: 0;
+                    value "int" int: 0;
+                    value "double" double: 0.0000000000000000000000000;
+                    value "string" string: "(type=Unknown)";
+                }
+            }
+            value "type" int: 6;
+            value "int" int: 0;
+            value "double" double: 0.0000000000000000000000000;
+        }
+    }
+    group "options" hash {
+        key "open_effects";
+        group "option" struct {
+            group "list" list {
+                group "option" struct {
+                    value "type" int: 0;
+                    value "int" int: 12;
+                    value "double" double: 0.0000000000000000000000000;
+                }
+                group "option" struct {
+                    value "type" int: 0;
+                    value "int" int: 9;
+                    value "double" double: 0.0000000000000000000000000;
+                }
+                group "option" struct {
+                    value "type" int: 0;
+                    value "int" int: 9;
+                    value "double" double: 0.0000000000000000000000000;
+                }
+                group "option" struct {
+                    value "type" int: 0;
+                    value "int" int: 9;
+                    value "double" double: 0.0000000000000000000000000;
+                }
+            }
+            value "type" int: 6;
+            value "int" int: 0;
+            value "double" double: 0.0000000000000000000000000;
+        }
+    }
+    group "options" hash {
+        key "beam_color";
+        group "option" struct {
+            value "type" int: 4;
+            value "int" int: 0;
+            value "double" double: 0.0000000000000000000000000;
+            value "string" string: "#7f7f7fff";
+        }
+    }
+    group "options" hash {
+        key "shade_options";
+        group "option" struct {
+            group "list" list {
+                group "option" struct {
+                    value "type" int: 3;
+                    value "int" int: 0;
+                    value "double" double: 0.0000000000000000000000000;
+                    value "string" string: "";
+                }
+            }
+            value "type" int: 6;
+            value "int" int: 0;
+            value "double" double: 0.0000000000000000000000000;
+        }
+    }
+    group "options" hash {
+        key "fold_dir";
+        group "option" struct {
+            value "type" int: 1;
+            value "int" int: 1;
+            value "double" double: 0.0000000000000000000000000;
+        }
+    }
+    group "options" hash {
+        key "beam_size";
+        group "option" struct {
+            value "type" int: 2;
+            value "int" int: 0;
+            value "double" double: 8.0000000000000000000000000;
+        }
+    }
+    group "options" hash {
+        key "minimize_matches";
+        group "option" struct {
+            group "list" list {
+                group "option" struct {
+                    value "type" int: 0;
+                    value "int" int: 0;
+                    value "double" double: 0.0000000000000000000000000;
+                    value "string" string: "(type=Normal | Dialog | ModalDialog | Utility | Unknown)";
+                }
+            }
+            value "type" int: 6;
+            value "int" int: 0;
+            value "double" double: 0.0000000000000000000000000;
+        }
+    }
+    group "options" hash {
+        key "shade_durations";
+        group "option" struct {
+            group "list" list {
+                group "option" struct {
+                    value "type" int: 1;
+                    value "int" int: 300;
+                    value "double" double: 0.0000000000000000000000000;
+                }
+            }
+            value "type" int: 6;
+            value "int" int: 0;
+            value "double" double: 0.0000000000000000000000000;
+        }
+    }
+    group "options" hash {
+        key "fire_mystical";
+        group "option" struct {
+            value "type" int: 0;
+            value "int" int: 0;
+            value "double" double: 0.0000000000000000000000000;
+        }
+    }
+    group "options" hash {
+        key "glide2_away_position";
+        group "option" struct {
+            value "type" int: 2;
+            value "int" int: 0;
+            value "double" double: -0.1499999999999999944488849;
+        }
+    }
+    group "options" hash {
+        key "glide1_away_position";
+        group "option" struct {
+            value "type" int: 2;
+            value "int" int: 0;
+            value "double" double: 0.1152000000000000107247544;
+        }
+    }
+    group "options" hash {
+        key "fire_particles";
+        group "option" struct {
+            value "type" int: 1;
+            value "int" int: 1960;
+            value "double" double: 0.0000000000000000000000000;
+        }
+    }
+    group "options" hash {
+        key "wave_width";
+        group "option" struct {
+            value "type" int: 2;
+            value "int" int: 0;
+            value "double" double: 1.4097000000000001751487844;
+        }
+    }
+    group "options" hash {
+        key "dream_zoom_to_taskbar";
+        group "option" struct {
+            value "type" int: 0;
+            value "int" int: 1;
+            value "double" double: 0.0000000000000000000000000;
+        }
+    }
+    group "options" hash {
+        key "fold_gridx";
+        group "option" struct {
+            value "type" int: 1;
+            value "int" int: 3;
+            value "double" double: 0.0000000000000000000000000;
+        }
+    }
+    group "options" hash {
+        key "glide2_away_angle";
+        group "option" struct {
+            value "type" int: 2;
+            value "int" int: 0;
+            value "double" double: 0.0000000000000000000000000;
+        }
+    }
+    group "options" hash {
+        key "fire_size";
+        group "option" struct {
+            value "type" int: 2;
+            value "int" int: 0;
+            value "double" double: 5.0000000000000000000000000;
+        }
+    }
+    group "options" hash {
+        key "sidekick_num_rotations";
+        group "option" struct {
+            value "type" int: 2;
+            value "int" int: 0;
+            value "double" double: 0.5000000000000000000000000;
+        }
+    }
+    group "options" hash {
+        key "glide2_zoom_to_taskbar";
+        group "option" struct {
+            value "type" int: 0;
+            value "int" int: 0;
+            value "double" double: 0.0000000000000000000000000;
+        }
+    }
+    group "options" hash {
+        key "time_step_intense";
+        group "option" struct {
+            value "type" int: 1;
+            value "int" int: 30;
+            value "double" double: 0.0000000000000000000000000;
+        }
+    }
+    group "options" hash {
+        key "wave_amp";
+        group "option" struct {
+            value "type" int: 2;
+            value "int" int: 0;
+            value "double" double: 0.0458000000000000004329870;
+        }
+    }
+    group "options" hash {
+        key "magic_lamp_open_start_width";
+        group "option" struct {
+            value "type" int: 1;
+            value "int" int: 30;
+            value "double" double: 0.0000000000000000000000000;
+        }
+    }
+    group "options" hash {
+        key "focus_durations";
+        group "option" struct {
+            group "list" list {
+                group "option" struct {
+                    value "type" int: 1;
+                    value "int" int: 517;
+                    value "double" double: 0.0000000000000000000000000;
+                }
+            }
+            value "type" int: 6;
+            value "int" int: 0;
+            value "double" double: 0.0000000000000000000000000;
+        }
+    }
+    group "options" hash {
+        key "close_effects";
+        group "option" struct {
+            group "list" list {
+                group "option" struct {
+                    value "type" int: 1;
+                    value "int" int: 11;
+                    value "double" double: 0.0000000000000000000000000;
+                }
+                group "option" struct {
+                    value "type" int: 1;
+                    value "int" int: 9;
+                    value "double" double: 0.0000000000000000000000000;
+                }
+                group "option" struct {
+                    value "type" int: 1;
+                    value "int" int: 9;
+                    value "double" double: 0.0000000000000000000000000;
+                }
+                group "option" struct {
+                    value "type" int: 1;
+                    value "int" int: 11;
+                    value "double" double: 0.0000000000000000000000000;
+                }
+                group "option" struct {
+                    value "type" int: 0;
+                    value "int" int: 9;
+                    value "double" double: 0.0000000000000000000000000;
+                }
+            }
+            value "type" int: 6;
+            value "int" int: 0;
+            value "double" double: 0.0000000000000000000000000;
+        }
+    }
+    group "options" hash {
+        key "shade_random_effects";
+        group "option" struct {
+            group "list" list {
+                group "option" struct {
+                    value "type" int: 1;
+                    value "int" int: 0;
+                    value "double" double: 0.0000000000000000000000000;
+                }
+                group "option" struct {
+                    value "type" int: 1;
+                    value "int" int: 1;
+                    value "double" double: 0.0000000000000000000000000;
+                }
+                group "option" struct {
+                    value "type" int: 1;
+                    value "int" int: 2;
+                    value "double" double: 0.0000000000000000000000000;
+                }
+            }
+            value "type" int: 6;
+            value "int" int: 0;
+            value "double" double: 0.0000000000000000000000000;
+        }
+    }
+    group "options" hash {
+        key "open_durations";
+        group "option" struct {
+            group "list" list {
+                group "option" struct {
+                    value "type" int: 0;
+                    value "int" int: 195;
+                    value "double" double: 0.0000000000000000000000000;
+                }
+                group "option" struct {
+                    value "type" int: 0;
+                    value "int" int: 141;
+                    value "double" double: 0.0000000000000000000000000;
+                }
+                group "option" struct {
+                    value "type" int: 0;
+                    value "int" int: 147;
+                    value "double" double: 0.0000000000000000000000000;
+                }
+                group "option" struct {
+                    value "type" int: 0;
+                    value "int" int: 321;
+                    value "double" double: 0.0000000000000000000000000;
+                }
+            }
+            value "type" int: 6;
+            value "int" int: 0;
+            value "double" double: 0.0000000000000000000000000;
+        }
+    }
+    group "options" hash {
+        key "time_step";
+        group "option" struct {
+            value "type" int: 1;
+            value "int" int: 10;
+            value "double" double: 0.0000000000000000000000000;
+        }
+    }
+    group "options" hash {
+        key "curved_fold_zoom_to_taskbar";
+        group "option" struct {
+            value "type" int: 0;
+            value "int" int: 1;
+            value "double" double: 0.0000000000000000000000000;
+        }
+    }
+    group "options" hash {
+        key "beam_spacing";
+        group "option" struct {
+            value "type" int: 1;
+            value "int" int: 5;
+            value "double" double: 0.0000000000000000000000000;
+        }
+    }
+    group "options" hash {
+        key "razr_direction";
+        group "option" struct {
+            value "type" int: 1;
+            value "int" int: 5;
+            value "double" double: 0.0000000000000000000000000;
+        }
+    }
+    group "options" hash {
+        key "shade_matches";
+        group "option" struct {
+            group "list" list {
+                group "option" struct {
+                    value "type" int: 5;
+                    value "int" int: 0;
+                    value "double" double: 0.0000000000000000000000000;
+                    value "string" string: "(type=Normal | Dialog | ModalDialog | Utility | Unknown)";
+                }
+            }
+            value "type" int: 6;
+            value "int" int: 0;
+            value "double" double: 0.0000000000000000000000000;
+        }
+    }
+    group "options" hash {
+        key "minimize_effects";
+        group "option" struct {
+            group "list" list {
+                group "option" struct {
+                    value "type" int: 0;
+                    value "int" int: 15;
+                    value "double" double: 0.0000000000000000000000000;
+                }
+            }
+            value "type" int: 6;
+            value "int" int: 0;
+            value "double" double: 0.0000000000000000000000000;
+        }
+    }
+    group "options" hash {
+        key "close_options";
+        group "option" struct {
+            value "type" int: 6;
+            value "int" int: 0;
+            value "double" double: 0.0000000000000000000000000;
+        }
+    }
+    group "options" hash {
+        key "zoom_springiness";
+        group "option" struct {
+            value "type" int: 2;
+            value "int" int: 0;
+            value "double" double: 0.0000000000000000000000000;
+        }
+    }
+    group "options" hash {
+        key "magic_lamp_moving_end";
+        group "option" struct {
+            value "type" int: 0;
+            value "int" int: 1;
+            value "double" double: 0.0000000000000000000000000;
+        }
+    }
+    group "options" hash {
+        key "fire_slowdown";
+        group "option" struct {
+            value "type" int: 2;
+            value "int" int: 0;
+            value "double" double: 1.9926000000000001488587031;
+        }
+    }
+    group "options" hash {
+        key "fire_smoke";
+        group "option" struct {
+            value "type" int: 0;
+            value "int" int: 0;
+            value "double" double: 0.0000000000000000000000000;
+        }
+    }
+    group "options" hash {
+        key "magic_lamp_grid_res";
+        group "option" struct {
+            value "type" int: 1;
+            value "int" int: 100;
+            value "double" double: 0.0000000000000000000000000;
+        }
+    }
+    group "options" hash {
+        key "glide2_thickness";
+        group "option" struct {
+            value "type" int: 2;
+            value "int" int: 0;
+            value "double" double: 0.0000000000000000000000000;
+        }
+    }
+    group "options" hash {
+        key "beam_life";
+        group "option" struct {
+            value "type" int: 2;
+            value "int" int: 0;
+            value "double" double: 0.7000000000000000666133815;
+        }
+    }
+    group "options" hash {
+        key "horizontal_folds_num_folds";
+        group "option" struct {
+            value "type" int: 1;
+            value "int" int: 3;
+            value "double" double: 0.0000000000000000000000000;
+        }
+    }
+    group "options" hash {
+        key "close_random_effects";
+        group "option" struct {
+            group "list" list {
+                group "option" struct {
+                    value "type" int: 0;
+                    value "int" int: 0;
+                    value "double" double: 0.0000000000000000000000000;
+                }
+                group "option" struct {
+                    value "type" int: 0;
+                    value "int" int: 1;
+                    value "double" double: 0.0000000000000000000000000;
+                }
+                group "option" struct {
+                    value "type" int: 0;
+                    value "int" int: 2;
+                    value "double" double: 0.0000000000000000000000000;
+                }
+                group "option" struct {
+                    value "type" int: 0;
+                    value "int" int: 3;
+                    value "double" double: 0.0000000000000000000000000;
+                }
+                group "option" struct {
+                    value "type" int: 0;
+                    value "int" int: 4;
+                    value "double" double: 0.0000000000000000000000000;
+                }
+                group "option" struct {
+                    value "type" int: 0;
+                    value "int" int: 5;
+                    value "double" double: 0.0000000000000000000000000;
+                }
+                group "option" struct {
+                    value "type" int: 0;
+                    value "int" int: 6;
+                    value "double" double: 0.0000000000000000000000000;
+                }
+                group "option" struct {
+                    value "type" int: 0;
+                    value "int" int: 7;
+                    value "double" double: 0.0000000000000000000000000;
+                }
+                group "option" struct {
+                    value "type" int: 0;
+                    value "int" int: 8;
+                    value "double" double: 0.0000000000000000000000000;
+                }
+                group "option" struct {
+                    value "type" int: 0;
+                    value "int" int: 9;
+                    value "double" double: 0.0000000000000000000000000;
+                }
+                group "option" struct {
+                    value "type" int: 0;
+                    value "int" int: 10;
+                    value "double" double: 0.0000000000000000000000000;
+                }
+                group "option" struct {
+                    value "type" int: 0;
+                    value "int" int: 11;
+                    value "double" double: 0.0000000000000000000000000;
+                }
+                group "option" struct {
+                    value "type" int: 0;
+                    value "int" int: 12;
+                    value "double" double: 0.0000000000000000000000000;
+                }
+                group "option" struct {
+                    value "type" int: 0;
+                    value "int" int: 13;
+                    value "double" double: 0.0000000000000000000000000;
+                }
+                group "option" struct {
+                    value "type" int: 0;
+                    value "int" int: 14;
+                    value "double" double: 0.0000000000000000000000000;
+                }
+                group "option" struct {
+                    value "type" int: 0;
+                    value "int" int: 15;
+                    value "double" double: 0.0000000000000000000000000;
+                }
+                group "option" struct {
+                    value "type" int: 0;
+                    value "int" int: 16;
+                    value "double" double: 0.0000000000000000000000000;
+                }
+                group "option" struct {
+                    value "type" int: 0;
+                    value "int" int: 17;
+                    value "double" double: 0.0000000000000000000000000;
+                }
+                group "option" struct {
+                    value "type" int: 0;
+                    value "int" int: 18;
+                    value "double" double: 0.0000000000000000000000000;
+                }
+                group "option" struct {
+                    value "type" int: 0;
+                    value "int" int: 19;
+                    value "double" double: 0.0000000000000000000000000;
+                }
+                group "option" struct {
+                    value "type" int: 0;
+                    value "int" int: 20;
+                    value "double" double: 0.0000000000000000000000000;
+                }
+                group "option" struct {
+                    value "type" int: 0;
+                    value "int" int: 21;
+                    value "double" double: 0.0000000000000000000000000;
+                }
+            }
+            value "type" int: 6;
+            value "int" int: 0;
+            value "double" double: 0.0000000000000000000000000;
+        }
+    }
+    group "options" hash {
+        key "fire_color";
+        group "option" struct {
+            value "type" int: 4;
+            value "int" int: 0;
+            value "double" double: 0.0000000000000000000000000;
+            value "string" string: "#ff3305ff";
+        }
+    }
+    group "options" hash {
+        key "all_random";
+        group "option" struct {
+            value "type" int: 0;
+            value "int" int: 0;
+            value "double" double: 0.0000000000000000000000000;
+        }
+    }
+    group "options" hash {
+        key "explode_thickness";
+        group "option" struct {
+            value "type" int: 2;
+            value "int" int: 0;
+            value "double" double: 15.0000000000000000000000000;
+        }
+    }
+    group "options" hash {
+        key "skewer_rotation";
+        group "option" struct {
+            value "type" int: 1;
+            value "int" int: 0;
+            value "double" double: 0.0000000000000000000000000;
+        }
+    }
+    group "options" hash {
+        key "minimize_random_effects";
+        group "option" struct {
+            group "list" list {
+                group "option" struct {
+                    value "type" int: 0;
+                    value "int" int: 0;
+                    value "double" double: 0.0000000000000000000000000;
+                }
+                group "option" struct {
+                    value "type" int: 0;
+                    value "int" int: 1;
+                    value "double" double: 0.0000000000000000000000000;
+                }
+                group "option" struct {
+                    value "type" int: 0;
+                    value "int" int: 2;
+                    value "double" double: 0.0000000000000000000000000;
+                }
+                group "option" struct {
+                    value "type" int: 0;
+                    value "int" int: 3;
+                    value "double" double: 0.0000000000000000000000000;
+                }
+                group "option" struct {
+                    value "type" int: 0;
+                    value "int" int: 4;
+                    value "double" double: 0.0000000000000000000000000;
+                }
+                group "option" struct {
+                    value "type" int: 0;
+                    value "int" int: 5;
+                    value "double" double: 0.0000000000000000000000000;
+                }
+                group "option" struct {
+                    value "type" int: 0;
+                    value "int" int: 6;
+                    value "double" double: 0.0000000000000000000000000;
+                }
+                group "option" struct {
+                    value "type" int: 0;
+                    value "int" int: 7;
+                    value "double" double: 0.0000000000000000000000000;
+                }
+                group "option" struct {
+                    value "type" int: 0;
+                    value "int" int: 8;
+                    value "double" double: 0.0000000000000000000000000;
+                }
+                group "option" struct {
+                    value "type" int: 0;
+                    value "int" int: 9;
+                    value "double" double: 0.0000000000000000000000000;
+                }
+                group "option" struct {
+                    value "type" int: 0;
+                    value "int" int: 10;
+                    value "double" double: 0.0000000000000000000000000;
+                }
+                group "option" struct {
+                    value "type" int: 0;
+                    value "int" int: 11;
+                    value "double" double: 0.0000000000000000000000000;
+                }
+            }
+            value "type" int: 6;
+            value "int" int: 0;
+            value "double" double: 0.0000000000000000000000000;
+        }
+    }
+    group "options" hash {
+        key "airplane_fly_to_taskbar";
+        group "option" struct {
+            value "type" int: 0;
+            value "int" int: 1;
+            value "double" double: 0.0000000000000000000000000;
+        }
+    }
+    group "options" hash {
+        key "rollup_fixed_interior";
+        group "option" struct {
+            value "type" int: 0;
+            value "int" int: 0;
+            value "double" double: 0.0000000000000000000000000;
+        }
+    }
+    group "options" hash {
+        key "horizontal_folds_amp";
+        group "option" struct {
+            value "type" int: 2;
+            value "int" int: 0;
+            value "double" double: 0.0700000000000000066613381;
+        }
+    }
+    group "options" hash {
+        key "glide1_zoom_to_taskbar";
+        group "option" struct {
+            value "type" int: 0;
+            value "int" int: 0;
+            value "double" double: 0.0000000000000000000000000;
+        }
+    }
+    group "options" hash {
+        key "explode_gridx";
+        group "option" struct {
+            value "type" int: 1;
+            value "int" int: 13;
+            value "double" double: 0.0000000000000000000000000;
+        }
+    }
+    group "options" hash {
+        key "open_options";
+        group "option" struct {
+            value "type" int: 6;
+            value "int" int: 0;
+            value "double" double: 0.0000000000000000000000000;
+        }
+    }
+    group "options" hash {
+        key "magic_lamp_amp_min";
+        group "option" struct {
+            value "type" int: 2;
+            value "int" int: 0;
+            value "double" double: 200.0000000000000000000000000;
+        }
+    }
+    group "options" hash {
+        key "glide1_thickness";
+        group "option" struct {
+            value "type" int: 2;
+            value "int" int: 0;
+            value "double" double: 0.0000000000000000000000000;
+        }
+    }
+    group "options" hash {
+        key "shade_effects";
+        group "option" struct {
+            group "list" list {
+                group "option" struct {
+                    value "type" int: 1;
+                    value "int" int: 4;
+                    value "double" double: 0.0000000000000000000000000;
+                }
+            }
+            value "type" int: 6;
+            value "int" int: 0;
+            value "double" double: 0.0000000000000000000000000;
+        }
+    }
+    group "options" hash {
+        key "curved_fold_amp";
+        group "option" struct {
+            value "type" int: 2;
+            value "int" int: 0;
+            value "double" double: 0.1499999999999999944488849;
+        }
+    }
+    group "options" hash {
+        key "close_durations";
+        group "option" struct {
+            group "list" list {
+                group "option" struct {
+                    value "type" int: 1;
+                    value "int" int: 214;
+                    value "double" double: 0.0000000000000000000000000;
+                }
+                group "option" struct {
+                    value "type" int: 1;
+                    value "int" int: 76;
+                    value "double" double: 0.0000000000000000000000000;
+                }
+                group "option" struct {
+                    value "type" int: 1;
+                    value "int" int: 150;
+                    value "double" double: 0.0000000000000000000000000;
+                }
+                group "option" struct {
+                    value "type" int: 1;
+                    value "int" int: 248;
+                    value "double" double: 0.0000000000000000000000000;
+                }
+                group "option" struct {
+                    value "type" int: 0;
+                    value "int" int: 165;
+                    value "double" double: 0.0000000000000000000000000;
+                }
+            }
+            value "type" int: 6;
+            value "int" int: 0;
+            value "double" double: 0.0000000000000000000000000;
+        }
+    }
+    group "options" hash {
+        key "focus_matches";
+        group "option" struct {
+            group "list" list {
+                group "option" struct {
+                    value "type" int: 5;
+                    value "int" int: 0;
+                    value "double" double: 0.0000000000000000000000000;
+                    value "string" string: "(type=Normal | Dialog | ModalDialog | Utility | Unknown)";
+                }
+            }
+            value "type" int: 6;
+            value "int" int: 0;
+            value "double" double: 0.0000000000000000000000000;
+        }
+    }
+    group "options" hash {
+        key "fire_life";
+        group "option" struct {
+            value "type" int: 2;
+            value "int" int: 0;
+            value "double" double: 0.7000000000000000666133815;
+        }
+    }
+    group "options" hash {
+        key "horizontal_folds_zoom_to_taskbar";
+        group "option" struct {
+            value "type" int: 0;
+            value "int" int: 1;
+            value "double" double: 0.0000000000000000000000000;
+        }
+    }
+    group "options" hash {
+        key "sidekick_zoom_from_center";
+        group "option" struct {
+            value "type" int: 1;
+            value "int" int: 0;
+            value "double" double: 0.0000000000000000000000000;
+        }
+    }
+    group "options" hash {
+        key "sidekick_springiness";
+        group "option" struct {
+            value "type" int: 2;
+            value "int" int: 0;
+            value "double" double: 0.0000000000000000000000000;
+        }
+    }
+}
