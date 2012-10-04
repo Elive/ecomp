@@ -167,6 +167,17 @@ AC_MSG_RESULT($GL_LIBS)
 AC_SUBST(GL_CFLAGS)
 AC_SUBST(GL_LIBS)
 
+AC_ARG_WITH(eet-eet,
+[  --with-eet-eet=PATH              specify a specific path to eet utility],
+[
+  v=$withval;
+  eet_eet=$v
+  echo "  Enlightenment eet explicitly set to "$eet_eet;
+],[
+  eet_eet=$(pkg-config --variable=prefix eet)/bin/eet
+])
+AC_SUBST(eet_eet)
+
 AC_CHECK_PROGS(XSLTPROC, xsltproc)
 if test -z "$XSLTPROC"; then
   AC_MSG_ERROR([Couldn't find xsltproc])
