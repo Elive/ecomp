@@ -1,7 +1,7 @@
-group "group" struct {
+group "Eco_Group" struct {
     group "options" hash {
         key "cover_offset";
-        group "option" struct {
+        group "Eco_Option" struct {
             value "type" int: 0;
             value "int" int: 0;
             value "double" double: 0.0000000000000000000000000;
@@ -9,7 +9,7 @@ group "group" struct {
     }
     group "options" hash {
         key "overlay_icon";
-        group "option" struct {
+        group "Eco_Option" struct {
             value "type" int: 0;
             value "int" int: 0;
             value "double" double: 0.0000000000000000000000000;
@@ -17,7 +17,7 @@ group "group" struct {
     }
     group "options" hash {
         key "flip_rotation";
-        group "option" struct {
+        group "Eco_Option" struct {
             value "type" int: 0;
             value "int" int: 28;
             value "double" double: 0.0000000000000000000000000;
@@ -25,7 +25,7 @@ group "group" struct {
     }
     group "options" hash {
         key "shift_speed";
-        group "option" struct {
+        group "Eco_Option" struct {
             value "type" int: 0;
             value "int" int: 0;
             value "double" double: 0.9605000000000000204281037;
@@ -33,7 +33,7 @@ group "group" struct {
     }
     group "options" hash {
         key "size";
-        group "option" struct {
+        group "Eco_Option" struct {
             value "type" int: 0;
             value "int" int: 35;
             value "double" double: 0.0000000000000000000000000;
@@ -41,7 +41,7 @@ group "group" struct {
     }
     group "options" hash {
         key "window_title";
-        group "option" struct {
+        group "Eco_Option" struct {
             value "type" int: 0;
             value "int" int: 1;
             value "double" double: 0.0000000000000000000000000;
@@ -49,7 +49,7 @@ group "group" struct {
     }
     group "options" hash {
         key "reflection";
-        group "option" struct {
+        group "Eco_Option" struct {
             value "type" int: 0;
             value "int" int: 1;
             value "double" double: 0.0000000000000000000000000;
@@ -57,7 +57,7 @@ group "group" struct {
     }
     group "options" hash {
         key "window_match";
-        group "option" struct {
+        group "Eco_Option" struct {
             value "type" int: 0;
             value "int" int: 0;
             value "double" double: 0.0000000000000000000000000;
@@ -66,7 +66,7 @@ group "group" struct {
     }
     group "options" hash {
         key "title_text_placement";
-        group "option" struct {
+        group "Eco_Option" struct {
             value "type" int: 0;
             value "int" int: 2;
             value "double" double: 0.0000000000000000000000000;
@@ -74,7 +74,7 @@ group "group" struct {
     }
     group "options" hash {
         key "mode";
-        group "option" struct {
+        group "Eco_Option" struct {
             value "type" int: 0;
             value "int" int: 1;
             value "double" double: 0.0000000000000000000000000;
@@ -82,7 +82,7 @@ group "group" struct {
     }
     group "options" hash {
         key "title_font_bold";
-        group "option" struct {
+        group "Eco_Option" struct {
             value "type" int: 0;
             value "int" int: 0;
             value "double" double: 0.0000000000000000000000000;
@@ -90,7 +90,7 @@ group "group" struct {
     }
     group "options" hash {
         key "title_font_size";
-        group "option" struct {
+        group "Eco_Option" struct {
             value "type" int: 0;
             value "int" int: 0;
             value "double" double: 0.0000000000000000000000000;
@@ -98,7 +98,7 @@ group "group" struct {
     }
     group "options" hash {
         key "hide_all";
-        group "option" struct {
+        group "Eco_Option" struct {
             value "type" int: 0;
             value "int" int: 1;
             value "double" double: 0.0000000000000000000000000;
@@ -106,7 +106,7 @@ group "group" struct {
     }
     group "options" hash {
         key "mipmaps";
-        group "option" struct {
+        group "Eco_Option" struct {
             value "type" int: 0;
             value "int" int: 1;
             value "double" double: 0.0000000000000000000000000;
@@ -114,7 +114,7 @@ group "group" struct {
     }
     group "options" hash {
         key "speed";
-        group "option" struct {
+        group "Eco_Option" struct {
             value "type" int: 0;
             value "int" int: 0;
             value "double" double: 2.2732000000000001094235813;
@@ -122,7 +122,7 @@ group "group" struct {
     }
     group "options" hash {
         key "background_intensity";
-        group "option" struct {
+        group "Eco_Option" struct {
             value "type" int: 0;
             value "int" int: 0;
             value "double" double: 0.6842000000000000303757020;
@@ -130,7 +130,7 @@ group "group" struct {
     }
     group "options" hash {
         key "minimized";
-        group "option" struct {
+        group "Eco_Option" struct {
             value "type" int: 0;
             value "int" int: 0;
             value "double" double: 0.0000000000000000000000000;

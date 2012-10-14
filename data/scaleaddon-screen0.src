@@ -1,7 +1,7 @@
-group "group" struct {
+group "Eco_Group" struct {
     group "options" hash {
         key "layout_mode";
-        group "option" struct {
+        group "Eco_Option" struct {
             value "type" int: 1;
             value "int" int: 0;
             value "double" double: 0.0000000000000000000000000;
@@ -9,7 +9,7 @@ group "group" struct {
     }
     group "options" hash {
         key "highlight_color";
-        group "option" struct {
+        group "Eco_Option" struct {
             value "type" int: 4;
             value "int" int: 0;
             value "double" double: 0.0000000000000000000000000;
@@ -18,7 +18,7 @@ group "group" struct {
     }
     group "options" hash {
         key "window_title";
-        group "option" struct {
+        group "Eco_Option" struct {
             value "type" int: 0;
             value "int" int: 1;
             value "double" double: 0.0000000000000000000000000;
@@ -26,7 +26,7 @@ group "group" struct {
     }
     group "options" hash {
         key "back_color";
-        group "option" struct {
+        group "Eco_Option" struct {
             value "type" int: 4;
             value "int" int: 0;
             value "double" double: 0.0000000000000000000000000;
@@ -35,7 +35,7 @@ group "group" struct {
     }
     group "options" hash {
         key "title_bold";
-        group "option" struct {
+        group "Eco_Option" struct {
             value "type" int: 0;
             value "int" int: 1;
             value "double" double: 0.0000000000000000000000000;
@@ -43,7 +43,7 @@ group "group" struct {
     }
     group "options" hash {
         key "title_size";
-        group "option" struct {
+        group "Eco_Option" struct {
             value "type" int: 1;
             value "int" int: 10;
             value "double" double: 0.0000000000000000000000000;
@@ -51,7 +51,7 @@ group "group" struct {
     }
     group "options" hash {
         key "border_size";
-        group "option" struct {
+        group "Eco_Option" struct {
             value "type" int: 1;
             value "int" int: 3;
             value "double" double: 0.0000000000000000000000000;
@@ -59,7 +59,7 @@ group "group" struct {
     }
     group "options" hash {
         key "font_color";
-        group "option" struct {
+        group "Eco_Option" struct {
             value "type" int: 4;
             value "int" int: 0;
             value "double" double: 0.0000000000000000000000000;
@@ -68,7 +68,7 @@ group "group" struct {
     }
     group "options" hash {
         key "window_highlight";
-        group "option" struct {
+        group "Eco_Option" struct {
             value "type" int: 0;
             value "int" int: 1;
             value "double" double: 0.0000000000000000000000000;

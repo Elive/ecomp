@@ -1,7 +1,7 @@
-group "group" struct {
+group "Eco_Group" struct {
     group "options" hash {
         key "acceleration";
-        group "option" struct {
+        group "Eco_Option" struct {
             value "type" int: 0;
             value "int" int: 0;
             value "double" double: 2.6716999999999999637623205;
@@ -9,7 +9,7 @@ group "group" struct {
     }
     group "options" hash {
         key "zoom";
-        group "option" struct {
+        group "Eco_Option" struct {
             value "type" int: 0;
             value "int" int: 0;
             value "double" double: 0.1073000000000000064837025;
@@ -17,7 +17,7 @@ group "group" struct {
     }
     group "options" hash {
         key "timestep";
-        group "option" struct {
+        group "Eco_Option" struct {
             value "type" int: 0;
             value "int" int: 0;
             value "double" double: 1.0637000000000000898836561;
@@ -25,7 +25,7 @@ group "group" struct {
     }
     group "options" hash {
         key "speed";
-        group "option" struct {
+        group "Eco_Option" struct {
             value "type" int: 0;
             value "int" int: 0;
             value "double" double: 2.9912000000000000810018719;

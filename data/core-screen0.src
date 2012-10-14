@@ -1,7 +1,7 @@
-group "group" struct {
+group "Eco_Group" struct {
     group "options" hash {
         key "sync_to_vblank";
-        group "option" struct {
+        group "Eco_Option" struct {
             value "type" int: 0;
             value "int" int: 0;
             value "double" double: 0.0000000000000000000000000;
@@ -9,9 +9,9 @@ group "group" struct {
     }
     group "options" hash {
         key "opacity_matches";
-        group "option" struct {
+        group "Eco_Option" struct {
             group "list" list {
-                group "option" struct {
+                group "Eco_Option" struct {
                     value "type" int: 0;
                     value "int" int: 0;
                     value "double" double: 0.0000000000000000000000000;
@@ -25,7 +25,7 @@ group "group" struct {
     }
     group "options" hash {
         key "detect_refresh_rate";
-        group "option" struct {
+        group "Eco_Option" struct {
             value "type" int: 0;
             value "int" int: 1;
             value "double" double: 0.0000000000000000000000000;
@@ -33,7 +33,7 @@ group "group" struct {
     }
     group "options" hash {
         key "refresh_rate";
-        group "option" struct {
+        group "Eco_Option" struct {
             value "type" int: 0;
             value "int" int: 44;
             value "double" double: 0.0000000000000000000000000;
@@ -41,7 +41,7 @@ group "group" struct {
     }
     group "options" hash {
         key "detect_outputs";
-        group "option" struct {
+        group "Eco_Option" struct {
             value "type" int: 0;
             value "int" int: 0;
             value "double" double: 0.0000000000000000000000000;
@@ -49,7 +49,7 @@ group "group" struct {
     }
     group "options" hash {
         key "lighting";
-        group "option" struct {
+        group "Eco_Option" struct {
             value "type" int: 0;
             value "int" int: 0;
             value "double" double: 0.0000000000000000000000000;
@@ -57,9 +57,9 @@ group "group" struct {
     }
     group "options" hash {
         key "opacity_values";
-        group "option" struct {
+        group "Eco_Option" struct {
             group "list" list {
-                group "option" struct {
+                group "Eco_Option" struct {
                     value "type" int: 0;
                     value "int" int: 85;
                     value "double" double: 0.0000000000000000000000000;
@@ -72,7 +72,7 @@ group "group" struct {
     }
     group "options" hash {
         key "matches";
-        group "option" struct {
+        group "Eco_Option" struct {
             value "type" int: 0;
             value "int" int: 0;
             value "double" double: 0.0000000000000000000000000;
@@ -80,7 +80,7 @@ group "group" struct {
     }
     group "options" hash {
         key "unredirect_fullscreen_windows";
-        group "option" struct {
+        group "Eco_Option" struct {
             value "type" int: 0;
             value "int" int: 0;
             value "double" double: 0.0000000000000000000000000;
@@ -88,7 +88,7 @@ group "group" struct {
     }
     group "options" hash {
         key "opacity_step";
-        group "option" struct {
+        group "Eco_Option" struct {
             value "type" int: 0;
             value "int" int: 32;
             value "double" double: 0.0000000000000000000000000;

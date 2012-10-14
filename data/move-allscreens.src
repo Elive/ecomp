@@ -1,7 +1,7 @@
-group "group" struct {
+group "Eco_Group" struct {
     group "options" hash {
         key "lazy_positioning";
-        group "option" struct {
+        group "Eco_Option" struct {
             value "type" int: 0;
             value "int" int: 0;
             value "double" double: 0.0000000000000000000000000;
@@ -9,7 +9,7 @@ group "group" struct {
     }
     group "options" hash {
         key "initiate";
-        group "option" struct {
+        group "Eco_Option" struct {
             value "type" int: 0;
             value "int" int: 1;
             value "double" double: 0.0000000000000000000000000;
@@ -17,7 +17,7 @@ group "group" struct {
     }
     group "options" hash {
         key "snapoff_maximized";
-        group "option" struct {
+        group "Eco_Option" struct {
             value "type" int: 0;
             value "int" int: 0;
             value "double" double: 0.0000000000000000000000000;
@@ -25,7 +25,7 @@ group "group" struct {
     }
     group "options" hash {
         key "constrain_y";
-        group "option" struct {
+        group "Eco_Option" struct {
             value "type" int: 0;
             value "int" int: 0;
             value "double" double: 0.0000000000000000000000000;
@@ -33,7 +33,7 @@ group "group" struct {
     }
     group "options" hash {
         key "opacity";
-        group "option" struct {
+        group "Eco_Option" struct {
             value "type" int: 1;
             value "int" int: 76;
             value "double" double: 0.0000000000000000000000000;

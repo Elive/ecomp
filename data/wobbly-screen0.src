@@ -1,7 +1,7 @@
-group "group" struct {
+group "Eco_Group" struct {
     group "options" hash {
         key "friction";
-        group "option" struct {
+        group "Eco_Option" struct {
             value "type" int: 0;
             value "int" int: 0;
             value "double" double: 8.8967000000000009407585821;
@@ -9,7 +9,7 @@ group "group" struct {
     }
     group "options" hash {
         key "map_window_match";
-        group "option" struct {
+        group "Eco_Option" struct {
             value "type" int: 0;
             value "int" int: 0;
             value "double" double: 0.0000000000000000000000000;
@@ -18,7 +18,7 @@ group "group" struct {
     }
     group "options" hash {
         key "min_grid_size";
-        group "option" struct {
+        group "Eco_Option" struct {
             value "type" int: 0;
             value "int" int: 82;
             value "double" double: 0.0000000000000000000000000;
@@ -26,7 +26,7 @@ group "group" struct {
     }
     group "options" hash {
         key "move_window_match";
-        group "option" struct {
+        group "Eco_Option" struct {
             value "type" int: 0;
             value "int" int: 0;
             value "double" double: 0.0000000000000000000000000;
@@ -35,7 +35,7 @@ group "group" struct {
     }
     group "options" hash {
         key "grid_resolution";
-        group "option" struct {
+        group "Eco_Option" struct {
             value "type" int: 0;
             value "int" int: 61;
             value "double" double: 0.0000000000000000000000000;
@@ -43,7 +43,7 @@ group "group" struct {
     }
     group "options" hash {
         key "maximize_effect";
-        group "option" struct {
+        group "Eco_Option" struct {
             value "type" int: 0;
             value "int" int: 1;
             value "double" double: 0.0000000000000000000000000;
@@ -51,7 +51,7 @@ group "group" struct {
     }
     group "options" hash {
         key "spring_k";
-        group "option" struct {
+        group "Eco_Option" struct {
             value "type" int: 0;
             value "int" int: 0;
             value "double" double: 6.6006000000000000227373675;
@@ -59,7 +59,7 @@ group "group" struct {
     }
     group "options" hash {
         key "focus_window_match";
-        group "option" struct {
+        group "Eco_Option" struct {
             value "type" int: 0;
             value "int" int: 0;
             value "double" double: 0.0000000000000000000000000;
@@ -68,7 +68,7 @@ group "group" struct {
     }
     group "options" hash {
         key "grab_window_match";
-        group "option" struct {
+        group "Eco_Option" struct {
             value "type" int: 0;
             value "int" int: 0;
             value "double" double: 0.0000000000000000000000000;

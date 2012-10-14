@@ -1,7 +1,7 @@
-group "group" struct {
+group "Eco_Group" struct {
     group "options" hash {
         key "strengh";
-        group "option" struct {
+        group "Eco_Option" struct {
             value "type" int: 0;
             value "int" int: 0;
             value "double" double: 0.2817000000000000059507954;
@@ -9,7 +9,7 @@ group "group" struct {
     }
     group "options" hash {
         key "strength";
-        group "option" struct {
+        group "Eco_Option" struct {
             value "type" int: 0;
             value "int" int: 0;
             value "double" double: 0.6397000000000000463629135;
@@ -17,7 +17,7 @@ group "group" struct {
     }
     group "options" hash {
         key "mode";
-        group "option" struct {
+        group "Eco_Option" struct {
             value "type" int: 0;
             value "int" int: 1;
             value "double" double: 0.0000000000000000000000000;
@@ -25,7 +25,7 @@ group "group" struct {
     }
     group "options" hash {
         key "on_transformed_screen";
-        group "option" struct {
+        group "Eco_Option" struct {
             value "type" int: 0;
             value "int" int: 0;
             value "double" double: 0.0000000000000000000000000;
@@ -33,7 +33,7 @@ group "group" struct {
     }
     group "options" hash {
         key "strngh";
-        group "option" struct {
+        group "Eco_Option" struct {
             value "type" int: 0;
             value "int" int: 0;
             value "double" double: 62.3563000000000045019987738;

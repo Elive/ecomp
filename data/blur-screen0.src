@@ -1,7 +1,7 @@
-group "group" struct {
+group "Eco_Group" struct {
     group "options" hash {
         key "focus_blur_match";
-        group "option" struct {
+        group "Eco_Option" struct {
             value "type" int: 5;
             value "int" int: 0;
             value "double" double: 0.0000000000000000000000000;
@@ -10,7 +10,7 @@ group "group" struct {
     }
     group "options" hash {
         key "alpha_blur_match";
-        group "option" struct {
+        group "Eco_Option" struct {
             value "type" int: 5;
             value "int" int: 0;
             value "double" double: 0.0000000000000000000000000;
@@ -19,7 +19,7 @@ group "group" struct {
     }
     group "options" hash {
         key "blur_speed";
-        group "option" struct {
+        group "Eco_Option" struct {
             value "type" int: 2;
             value "int" int: 0;
             value "double" double: 4.0000000000000000000000000;
@@ -27,7 +27,7 @@ group "group" struct {
     }
     group "options" hash {
         key "focus_blur";
-        group "option" struct {
+        group "Eco_Option" struct {
             value "type" int: 0;
             value "int" int: 0;
             value "double" double: 0.0000000000000000000000000;
@@ -35,7 +35,7 @@ group "group" struct {
     }
     group "options" hash {
         key "gaussian_radius";
-        group "option" struct {
+        group "Eco_Option" struct {
             value "type" int: 1;
             value "int" int: 9;
             value "double" double: 0.0000000000000000000000000;
@@ -43,7 +43,7 @@ group "group" struct {
     }
     group "options" hash {
         key "saturation";
-        group "option" struct {
+        group "Eco_Option" struct {
             value "type" int: 1;
             value "int" int: 65;
             value "double" double: 0.0000000000000000000000000;
@@ -51,7 +51,7 @@ group "group" struct {
     }
     group "options" hash {
         key "filter";
-        group "option" struct {
+        group "Eco_Option" struct {
             value "type" int: 1;
             value "int" int: 2;
             value "double" double: 0.0000000000000000000000000;
@@ -59,7 +59,7 @@ group "group" struct {
     }
     group "options" hash {
         key "mipmap_lod";
-        group "option" struct {
+        group "Eco_Option" struct {
             value "type" int: 2;
             value "int" int: 0;
             value "double" double: 3.0000000000000000000000000;
@@ -67,7 +67,7 @@ group "group" struct {
     }
     group "options" hash {
         key "occlusion";
-        group "option" struct {
+        group "Eco_Option" struct {
             value "type" int: 0;
             value "int" int: 1;
             value "double" double: 0.0000000000000000000000000;
@@ -75,7 +75,7 @@ group "group" struct {
     }
     group "options" hash {
         key "gaussian_strength";
-        group "option" struct {
+        group "Eco_Option" struct {
             value "type" int: 2;
             value "int" int: 0;
             value "double" double: 1.0000000000000000000000000;
@@ -83,7 +83,7 @@ group "group" struct {
     }
     group "options" hash {
         key "alpha_blur";
-        group "option" struct {
+        group "Eco_Option" struct {
             value "type" int: 0;
             value "int" int: 1;
             value "double" double: 0.0000000000000000000000000;
