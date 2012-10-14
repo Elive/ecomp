@@ -58,23 +58,28 @@ static CompMetadata iniMetadata;
 static Bool iniSaveOptions(CompDisplay *d,
                            int          screen,
                            char        *plugin);
+static void _eco_string_free(const char *str);
 
 static Eet_Data_Descriptor *edd_group, *edd_option;
+static Eet_Dictionary *edic = NULL;
 
-typedef struct _Option
+typedef struct _Eco_Option Eco_Option;
+typedef struct _Eco_Group Eco_Group;
+
+struct _Eco_Option
 {
-   int        type;
+   int          type;
 
-   int        intValue;
-   double     doubleValue;
-   char      *stringValue;
-   Eina_List *listValue;
-}Option;
+   int          intValue;
+   double       doubleValue;
+   const char  *stringValue;
+   Eina_List   *listValue;
+};
 
-typedef struct _Group
+struct _Eco_Group
 {
    Eina_Hash *data;
-}Group;
+};
 
 static Eina_Hash *
 eet_eina_hash_add(Eina_Hash *hash, const char *key, const void *data)
@@ -383,10 +388,10 @@ typedef struct _IniOptData
 }IniOptData;
 
 static Bool
-iniGetOptList(Option *listOpt, CompListValue *list, CompOptionType type)
+iniGetOptList(Eco_Option *listOpt, CompListValue *list, CompOptionType type)
 {
    Eina_List *l;
-   Option *opt;
+   Eco_Option *opt;
    int count = eina_list_count(listOpt->listValue);
    int i = 0;
 
@@ -436,15 +441,15 @@ iniGetOptList(Option *listOpt, CompListValue *list, CompOptionType type)
 static Eina_Bool
 iniFreeGroup(const Eina_Hash *hash, const void *key, void *data, void *fdata)
 {
-   Option *opt = data;
+   Eco_Option *opt = data;
 
-   if (opt->stringValue) free (opt->stringValue);
+   if (opt->stringValue) _eco_string_free(opt->stringValue);
    if (opt->listValue)
      {
-        Option *item;
+        Eco_Option *item;
         EINA_LIST_FREE(opt->listValue, item)
           {
-             if (item->stringValue) free (item->stringValue);
+             if (item->stringValue) _eco_string_free(item->stringValue);
              free(item);
           }
      }
@@ -458,8 +463,9 @@ static Eina_Bool
 iniLoadGroup(const Eina_Hash *hash, const void *key, void *data, void *fdata)
 {
    IniOptData *od = (IniOptData *)fdata;
-   Option *opt = data;
-   char *optionName = (char *)key, *optionValue;
+   Eco_Option *opt = data;
+   char *optionName = (char *)key;
+   const char *optionValue;
 
    CompOption *option = od->option;
    int nOption = od->nOption;
@@ -469,9 +475,10 @@ iniLoadGroup(const Eina_Hash *hash, const void *key, void *data, void *fdata)
 
    CompOption *o;
    CompOptionValue value;
-   int hasValue = FALSE, status;
+   Eina_Bool hasValue = EINA_FALSE;
+   Eina_Bool status = EINA_FALSE;
 
-   optionValue = opt->stringValue;
+   optionValue = eina_stringshare_ref(opt->stringValue);
 
    o = compFindOption (option, nOption, optionName, 0);
    if (o)
@@ -558,7 +565,7 @@ iniLoadGroup(const Eina_Hash *hash, const void *key, void *data, void *fdata)
 }
 
 static Bool
-iniLoadOptionsFromFile(CompDisplay *d, Group *options, char *plugin, int screen)
+iniLoadOptionsFromFile(CompDisplay *d, Eco_Group *options, char *plugin, int screen)
 {
    CompOption *option = NULL;
    CompScreen *s = NULL;
@@ -698,16 +705,16 @@ iniSaveOptions(CompDisplay *d,
      return FALSE;
 
    fullPath = malloc (sizeof (char) * (strlen (directory) + 10));
-   sprintf (fullPath, "%s/%s", directory, "ecomp.eet");
+   sprintf (fullPath, "%s/%s", directory, "ecomp.cfg");
    printf("open write %s\n", filename);
 
    Eet_File *optionFile = eet_open(fullPath, EET_FILE_MODE_READ_WRITE);
-   Group *options = eet_data_read(optionFile, edd_group, filename);
-   Option *opt;
+   Eco_Group *options = eet_data_read(optionFile, edd_group, filename);
+   Eco_Option *opt;
    if (!options)
      {
         /* printf("calloc options\n"); */
-         options = calloc (1, sizeof (Group));
+         options = calloc (1, sizeof (Eco_Group));
      }
 
    if (!optionFile)
@@ -733,7 +740,7 @@ iniSaveOptions(CompDisplay *d,
            case CompOptionTypeBool:
              if (!(opt = eina_hash_find(options->data, option->name)))
                {
-                  opt = calloc(1, sizeof(Option));
+                  opt = calloc(1, sizeof(Eco_Option));
                   opt->type = option->type;
                   options->data = eet_eina_hash_add(options->data, option->name, opt);
                }
@@ -743,7 +750,7 @@ iniSaveOptions(CompDisplay *d,
            case CompOptionTypeInt:
              if (!(opt = eina_hash_find(options->data, option->name)))
                {
-                  opt = calloc(1, sizeof(Option));
+                  opt = calloc(1, sizeof(Eco_Option));
                   opt->type = option->type;
                   options->data = eet_eina_hash_add(options->data, option->name, opt);
                }
@@ -753,7 +760,7 @@ iniSaveOptions(CompDisplay *d,
            case CompOptionTypeFloat:
              if (!(opt = eina_hash_find(options->data, option->name)))
                {
-                  opt = calloc(1, sizeof(Option));
+                  opt = calloc(1, sizeof(Eco_Option));
                   opt->type = option->type;
                   options->data = eet_eina_hash_add(options->data, option->name, opt);
                }
@@ -768,12 +775,12 @@ iniSaveOptions(CompDisplay *d,
                {
                   if (!(opt = eina_hash_find(options->data, option->name)))
                     {
-                       opt = calloc(1, sizeof(Option));
+                       opt = calloc(1, sizeof(Eco_Option));
                        opt->type = option->type;
                        options->data = eet_eina_hash_add(options->data, option->name, opt);
                     }
                   else if (opt->stringValue)
-                    free (opt->stringValue);
+                     _eco_string_free(opt->stringValue);
 
                   opt->stringValue = strVal;
                }
@@ -793,23 +800,23 @@ iniSaveOptions(CompDisplay *d,
 
                    if (!(opt = eina_hash_find(options->data, option->name)))
                      {
-                        opt = calloc(1, sizeof(Option));
+                        opt = calloc(1, sizeof(Eco_Option));
                         opt->type = CompOptionTypeList;
                         options->data = eet_eina_hash_add(options->data, option->name, opt);
                      }
 
-                   Option *item;
+                   Eco_Option *item;
                    CompListValue *list = &option->value.list;
 
                    EINA_LIST_FREE(opt->listValue, item)
                      {
-                        if (item->stringValue) free (item->stringValue);
+                        if (item->stringValue) _eco_string_free(item->stringValue);
                         free(item);
                      }
 
                    for (i = 0; i < list->nValue; i++)
                      {
-                        Option *o;
+                        Eco_Option *o;
 
                         switch (list->type)
                           {
@@ -819,7 +826,7 @@ iniSaveOptions(CompDisplay *d,
                                                                list->type);
                              if (itemVal)
                                {
-                                  o = calloc(1, sizeof(Option));
+                                  o = calloc(1, sizeof(Eco_Option));
                                   o->type = list->type;
                                   o->stringValue = itemVal;
                                   opt->listValue = eina_list_append(opt->listValue, o);
@@ -827,21 +834,21 @@ iniSaveOptions(CompDisplay *d,
                              break;
 
                            case CompOptionTypeBool:
-                             o = calloc(1, sizeof(Option));
+                             o = calloc(1, sizeof(Eco_Option));
                              o->type = list->type;
                              o->intValue = (int)list->value[i].b;
                              opt->listValue = eina_list_append(opt->listValue, o);
                              break;
 
                            case CompOptionTypeInt:
-                             o = calloc(1, sizeof(Option));
+                             o = calloc(1, sizeof(Eco_Option));
                              o->type = list->type;
                              o->intValue = list->value[i].i;
                              opt->listValue = eina_list_append(opt->listValue, o);
                              break;
 
                            case CompOptionTypeFloat:
-                             o = calloc(1, sizeof(Option));
+                             o = calloc(1, sizeof(Eco_Option));
                              o->type = list->type;
                              o->doubleValue = (double)list->value[i].f;
                              opt->listValue = eina_list_append(opt->listValue, o);
@@ -922,7 +929,7 @@ static Bool
 iniLoadOptions(CompDisplay *d, int screen, char *plugin)
 {
    char *filename, *directory, *fullPath;
-   Group *options;
+   Eco_Group *options;
 
    INI_DISPLAY (d);
 
@@ -938,14 +945,14 @@ iniLoadOptions(CompDisplay *d, int screen, char *plugin)
      }
 
    fullPath = malloc (sizeof (char) * (strlen (directory) + 11));
-   sprintf (fullPath, "%s/%s", directory, "ecomp.eet");
+   sprintf (fullPath, "%s/%s", directory, "ecomp.cfg");
 
    Eet_File *optionFile = eet_open(fullPath, EET_FILE_MODE_READ);
 
    if (!optionFile && iniMakeDirectories ())
      {
         char *tmpPath = malloc (sizeof (char) * (strlen (METADATADIR) + 11));
-        sprintf (tmpPath, "%s/%s", METADATADIR, "ecomp.eet");
+        sprintf (tmpPath, "%s/%s", METADATADIR, "ecomp.cfg");
         printf("load defaults: %s\n", tmpPath);
 
         if (copyFile(tmpPath, fullPath))
@@ -968,6 +975,7 @@ iniLoadOptions(CompDisplay *d, int screen, char *plugin)
         goto error;
      }
 
+   edic = eet_dictionary_get(optionFile);
    id->locked = TRUE;
    iniLoadOptionsFromFile (d, options, plugin, screen);
    id->locked = FALSE;
@@ -995,7 +1003,7 @@ iniFileModified(const char *name,
    d = (CompDisplay *)closure;
 
    char *filename, *directory, *fullPath;
-   Group *options;
+   Eco_Group *options;
 
    INI_DISPLAY (d);
 
@@ -1012,7 +1020,7 @@ iniFileModified(const char *name,
    id->locked = TRUE;
 
    fullPath = malloc (sizeof (char) * (strlen (directory) + 11));
-   sprintf (fullPath, "%s/%s", directory, "ecomp.eet");
+   sprintf (fullPath, "%s/%s", directory, "ecomp.cfg");
 
    Eet_File *optionFile = eet_open(fullPath, EET_FILE_MODE_READ);
 
@@ -1338,29 +1346,21 @@ iniInit(CompPlugin *p)
    eina_init();
    eet_init();
 
-   /* Option option;
-    * Group  group; */
+   Eet_Data_Descriptor_Class eddc; 
+   
+   EET_EINA_STREAM_DATA_DESCRIPTOR_CLASS_SET(&eddc, Eco_Group);
+   edd_group = eet_data_descriptor_stream_new(&eddc);
 
-   edd_group = eet_data_descriptor_new("group", sizeof(Group),
-                                       NULL, NULL, NULL, NULL,
-                                       (void (*)(void *, int (*)(void *, const char *, void *, void *), void *))eina_hash_foreach,
-                                       (void *(*)(void *, const char *, void *))eet_eina_hash_add,
-                                       (void (*)(void *))eina_hash_free);
+   EET_EINA_STREAM_DATA_DESCRIPTOR_CLASS_SET(&eddc, Eco_Option);
+   edd_option = eet_data_descriptor_stream_new(&eddc);
+   
+   EET_DATA_DESCRIPTOR_ADD_BASIC(edd_option, Eco_Option, "type", type, EET_T_INT);
+   EET_DATA_DESCRIPTOR_ADD_BASIC(edd_option, Eco_Option, "int", intValue, EET_T_INT);
+   EET_DATA_DESCRIPTOR_ADD_BASIC(edd_option, Eco_Option, "double", doubleValue, EET_T_DOUBLE);
+   EET_DATA_DESCRIPTOR_ADD_BASIC(edd_option, Eco_Option, "string", stringValue, EET_T_STRING);
+   EET_DATA_DESCRIPTOR_ADD_LIST (edd_option, Eco_Option, "list", listValue, edd_option);
 
-   edd_option = eet_data_descriptor_new("option", sizeof(Option),
-                                        (void *(*)(void *))eina_list_next,
-                                        (void *(*)(void *, void *))eina_list_append,
-                                        (void *(*)(void *))eina_list_data_get,
-                                        (void *(*)(void *))eina_list_free,
-                                        NULL, NULL, NULL);
-
-   EET_DATA_DESCRIPTOR_ADD_BASIC(edd_option, Option, "type", type, EET_T_INT);
-   EET_DATA_DESCRIPTOR_ADD_BASIC(edd_option, Option, "int", intValue, EET_T_INT);
-   EET_DATA_DESCRIPTOR_ADD_BASIC(edd_option, Option, "double", doubleValue, EET_T_DOUBLE);
-   EET_DATA_DESCRIPTOR_ADD_BASIC(edd_option, Option, "string", stringValue, EET_T_STRING);
-   EET_DATA_DESCRIPTOR_ADD_LIST (edd_option, Option, "list", listValue, edd_option);
-
-   EET_DATA_DESCRIPTOR_ADD_HASH (edd_group, Group, "options", data, edd_option);
+   EET_DATA_DESCRIPTOR_ADD_HASH (edd_group,  Eco_Group, "options", data, edd_option);
 
    compAddMetadataFromFile (&iniMetadata, p->vTable->name);
 
@@ -1410,3 +1410,14 @@ getCompPluginInfo(void)
    return &iniVTable;
 }
 
+static void
+_eco_string_free(const char *str)
+{
+   if (!str)
+     return;
+
+   if ((edic) && (eet_dictionary_string_check(edic, str)))
+     return;
+
+   eina_stringshare_del(str);
+}   
