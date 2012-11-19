@@ -1,13 +1,5 @@
 group "Eco_Group" struct {
     group "options" hash {
-        key "strengh";
-        group "Eco_Option" struct {
-            value "type" int: 0;
-            value "int" int: 0;
-            value "double" double: 0.2817000000000000059507954;
-        }
-    }
-    group "options" hash {
         key "strength";
         group "Eco_Option" struct {
             value "type" int: 0;
@@ -29,14 +21,6 @@ group "Eco_Group" struct {
             value "type" int: 0;
             value "int" int: 0;
             value "double" double: 0.0000000000000000000000000;
-        }
-    }
-    group "options" hash {
-        key "strngh";
-        group "Eco_Option" struct {
-            value "type" int: 0;
-            value "int" int: 0;
-            value "double" double: 62.3563000000000045019987738;
         }
     }
 }
