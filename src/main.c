@@ -39,6 +39,7 @@
 char *programName;
 char **programArgv;
 int programArgc;
+int ecomp_log;
 
 char *backgroundImage = NULL;
 
@@ -270,6 +271,10 @@ main(int argc, char **argv)
    int i, nPlugin = 0;
    /* Bool      disableSm = FALSE; */
    char *refreshRateArg = NULL;
+
+   ecomp_log = eina_log_domain_register("ECOMP", EINA_COLOR_LIGHTBLUE);
+   eina_log_domain_level_set("ECOMP", EINA_LOG_LEVEL_DBG);
+   DBG("Starting Ecomp");
 
    programName = argv[0];
    programArgc = argc;

@@ -106,6 +106,19 @@
 #include <GL/gl.h>
 #include <GL/glx.h>
 
+#include <Eina.h>
+extern int ecomp_log;
+#undef DBG
+#undef INF
+#undef WRN
+#undef ERR
+#undef CRI
+#define DBG(...)            EINA_LOG_DOM_DBG(ecomp_log, __VA_ARGS__)
+#define INF(...)            EINA_LOG_DOM_INFO(ecomp_log, __VA_ARGS__)
+#define WRN(...)            EINA_LOG_DOM_WARN(ecomp_log, __VA_ARGS__)
+#define ERR(...)            EINA_LOG_DOM_ERR(ecomp_log, __VA_ARGS__)
+#define CRI(...)            EINA_LOG_DOM_CRIT(ecomp_log, __VA_ARGS__)
+
 #ifdef  __cplusplus
 extern "C" {
 #endif
