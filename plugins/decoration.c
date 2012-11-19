@@ -109,7 +109,13 @@ typedef struct _WindowDecoration
 #define DECOR_DISPLAY_OPTION_MIPMAP                 13
 #define DECOR_DISPLAY_OPTION_MENU_MATCH             14
 #define DECOR_DISPLAY_OPTION_SHADOW_MATCH           15
-#define DECOR_DISPLAY_OPTION_NUM                    16
+#define DECOR_DISPLAY_OPTION_SHADOW_R               16
+#define DECOR_DISPLAY_OPTION_SHADOW_G               17
+#define DECOR_DISPLAY_OPTION_SHADOW_B               18
+#define DECOR_DISPLAY_OPTION_MENU_SHADOW_R          19
+#define DECOR_DISPLAY_OPTION_MENU_SHADOW_G          20
+#define DECOR_DISPLAY_OPTION_MENU_SHADOW_B          21
+#define DECOR_DISPLAY_OPTION_NUM                    22
 
 static int displayPrivateIndex;
 
@@ -748,6 +754,9 @@ decorSetDisplayOption(CompPlugin *plugin, CompDisplay *display,
       case DECOR_DISPLAY_OPTION_SHADOW_OFFSET_Y:
       case DECOR_DISPLAY_OPTION_SHADOW_OFFSET_X:
       case DECOR_DISPLAY_OPTION_SHADOW_COLOR:
+      case DECOR_DISPLAY_OPTION_SHADOW_R:
+      case DECOR_DISPLAY_OPTION_SHADOW_G:
+      case DECOR_DISPLAY_OPTION_SHADOW_B:
         if (!compSetOption(o, value)) break;
         i = DECOR_SHADOW;
         for (s = display->screens; s; s = s->next)
@@ -769,6 +778,9 @@ decorSetDisplayOption(CompPlugin *plugin, CompDisplay *display,
       case DECOR_DISPLAY_OPTION_MENU_SHADOW_OPACITY:
       case DECOR_DISPLAY_OPTION_MENU_SHADOW_OFFSET_Y:
       case DECOR_DISPLAY_OPTION_MENU_SHADOW_OFFSET_X:
+      case DECOR_DISPLAY_OPTION_MENU_SHADOW_R:
+      case DECOR_DISPLAY_OPTION_MENU_SHADOW_G:
+      case DECOR_DISPLAY_OPTION_MENU_SHADOW_B:
         if (!compSetOption(o, value)) break;
         i = DECOR_MENU;
         for (s = display->screens; s; s = s->next)
@@ -901,7 +913,13 @@ static const CompMetadataOptionInfo decorDisplayOptionInfo[] = {
    { "active_shadow_y_offset", "int", "<min>-16</min><max>16</max>", 0, 0 },
    { "mipmap", "bool", 0, 0, 0 },
    { "menu_shadow_match", "match", 0, 0, 0 },
-   { "shadow_match", "match", 0, 0, 0 }
+   { "shadow_match", "match", 0, 0, 0 },
+   { "shadow_color_r", "int", "<min>0</min><max>255</max>", 0, 0 },
+   { "shadow_color_g", "int", "<min>0</min><max>255</max>", 0, 0 },
+   { "shadow_color_b", "int", "<min>0</min><max>255</max>", 0, 0 },
+   { "menu_shadow_color_r", "int", "<min>0</min><max>255</max>", 0, 0 },
+   { "menu_shadow_color_g", "int", "<min>0</min><max>255</max>", 0, 0 },
+   { "menu_shadow_color_b", "int", "<min>0</min><max>255</max>", 0, 0 }
 };
 
 static Bool
@@ -1006,14 +1024,17 @@ decorCreateShadow(CompScreen *s, int shadowType)
            {
               opt.shadow_radius = rad;
               opt.shadow_opacity = dd->opt[DECOR_DISPLAY_OPTION_SHADOW_OPACITY].value.f;
-              opt.shadow_color[0] = 0;
-              opt.shadow_color[1] = 0;
-              opt.shadow_color[2] = 0;
+              opt.shadow_color[0] = dd->opt[DECOR_DISPLAY_OPTION_SHADOW_R].value.i * 257;
+              opt.shadow_color[1] = dd->opt[DECOR_DISPLAY_OPTION_SHADOW_G].value.i * 257;
+              opt.shadow_color[2] = dd->opt[DECOR_DISPLAY_OPTION_SHADOW_B].value.i * 257;
               opt.shadow_offset_x = dd->opt[DECOR_DISPLAY_OPTION_SHADOW_OFFSET_X].value.i;
               opt.shadow_offset_y = dd->opt[DECOR_DISPLAY_OPTION_SHADOW_OFFSET_Y].value.i;
 
-              printf("use custom shadow %f,%f, %d, %d\n", opt.shadow_radius, opt.shadow_opacity,
-                     opt.shadow_offset_x, opt.shadow_offset_y);
+              printf("use custom shadow %f,%f, %d, %d R:%d G:%d B:%d\n",
+                     opt.shadow_radius, opt.shadow_opacity,
+                     opt.shadow_offset_x, opt.shadow_offset_y,
+                     opt.shadow_color[0], opt.shadow_color[1],
+                     opt.shadow_color[2]);
            }
       }
     else if (shadowType == DECOR_MENU)
@@ -1022,14 +1043,17 @@ decorCreateShadow(CompScreen *s, int shadowType)
            {
               opt.shadow_radius = rad;
               opt.shadow_opacity = dd->opt[DECOR_DISPLAY_OPTION_MENU_SHADOW_OPACITY].value.f;
-              opt.shadow_color[0] = 0;
-              opt.shadow_color[1] = 0;
-              opt.shadow_color[2] = 0;
+              opt.shadow_color[0] = dd->opt[DECOR_DISPLAY_OPTION_MENU_SHADOW_R].value.i * 257;
+              opt.shadow_color[1] = dd->opt[DECOR_DISPLAY_OPTION_MENU_SHADOW_G].value.i * 257;
+              opt.shadow_color[2] = dd->opt[DECOR_DISPLAY_OPTION_MENU_SHADOW_B].value.i * 257;
               opt.shadow_offset_x = dd->opt[DECOR_DISPLAY_OPTION_MENU_SHADOW_OFFSET_X].value.i;
               opt.shadow_offset_y = dd->opt[DECOR_DISPLAY_OPTION_MENU_SHADOW_OFFSET_Y].value.i;
 
-              printf("use custom shadow %f,%f, %d, %d\n", opt.shadow_radius, opt.shadow_opacity,
-                     opt.shadow_offset_x, opt.shadow_offset_y);
+              printf("use custom shadow %f,%f, %d, %d R:%d G:%d B:%d\n",
+                     opt.shadow_radius, opt.shadow_opacity,
+                     opt.shadow_offset_x, opt.shadow_offset_y,
+                     opt.shadow_color[0], opt.shadow_color[1],
+                     opt.shadow_color[2]);
            }
       }
 
