@@ -13,7 +13,7 @@ group "Eco_Group" struct {
             value "type" int: 0;
             value "int" int: 0;
             value "double" double: 0.0000000000000000000000000;
-            value "string" string: "(type=any& !(type=dropdownmenu|popupmenu";
+            value "string" string: "(type=any& !(type=DropdownMenu|PopupMenu|Menu))";
         }
     }
     group "options" hash {
@@ -30,7 +30,7 @@ group "Eco_Group" struct {
             value "type" int: 0;
             value "int" int: 0;
             value "double" double: 0.0000000000000000000000000;
-            value "string" string: "type=dropdownmenu|popupmenu";
+            value "string" string: "type=DropdownMenu|PopupMenu|Menu";
         }
     }
     group "options" hash {
@@ -103,7 +103,7 @@ group "Eco_Group" struct {
             value "type" int: 0;
             value "int" int: 0;
             value "double" double: 0.0000000000000000000000000;
-            value "string" string: "(type=menu | dropdownmenu)";
+            value "string" string: "(type=Menu | DropdownMenu | PopupMenu)";
         }
     }
 }
